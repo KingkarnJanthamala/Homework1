@@ -8,6 +8,7 @@
             Console.Write("Please input agency : ");
             string agency = Console.ReadLine();
 
+            if ((password >= 100000) && (password < 1000000)) {
             int password1 = password / 100000;
             int password2 = ((password - (password1 * 100000 )) / 10000);
             int password3 = ((password - (password1 * 100000 ) - (password2 * 10000)) / 1000);
@@ -41,5 +42,8 @@
             } else {
                 Console.WriteLine("Password is incorrect");
             }
+        } else {
+            Console.WriteLine("Please enter a 6-digit password.");
+        }
     }
  }
